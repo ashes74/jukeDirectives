@@ -15,7 +15,13 @@ juke.directive('playerControls', ['PlayerFactory', function(PlayerFactory){
         return PlayerFactory.getProgress() * 100;
       };
 
-
+      e.bind("keydown keypress", function (event) {
+            if(event.which === 39) {
+              console.log("pressing the right button");
+              s.next();
+              event.preventDefault();
+            }
+        });
     }
 
   }

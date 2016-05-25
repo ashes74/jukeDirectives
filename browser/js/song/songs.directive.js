@@ -32,9 +32,9 @@ juke.directive('songsTable', ['PlayerFactory', function(PlayerFactory){
     scope:{
       doubleClick: '&'
     },
-    link: function (s,e,a) {
-      e.on('dblclick', function (song) {
-        s.doubleClick(song)
+    link: function (scope,element,a) {
+      element.on('dblclick', function (song) {
+        scope.doubleClick(song)
       })
     }
   }
